@@ -2,32 +2,41 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+import { Route,
+          NavLink, 
+          BrowserRouter as Router, 
+          Switch 
+        } from 'react-router-dom'
 import Resources from './components/Resources'
-import Users from './components/Users'
+import Profiles from './components/Profiles'
 import * as serviceWorker from './serviceWorker';
-import Notfound from './components/NotFound'
+import NotFound from './components/NotFound'
+import Login from './components/Login'
 
 const routing = (
   <Router>
     <div>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink exact activeClassName="active" to="/">Home</NavLink>
         </li>
         <li>
-          <Link to="/users">Users</Link>
+          <NavLink activeClassName="active" to="/login">Login</NavLink>
         </li>
         <li>
-          <Link to="/resources">Resources</Link>
+          <NavLink activeClassName="active" to="/profiles">Profiles</NavLink>
+        </li>
+        <li>
+          <NavLink activeClassName="active" to="/resources">Resources</NavLink>
         </li>
       </ul>
+      <hr />
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/users/:id" component={Users} />
-
+        <Route path="/login" component={Login} />
+        <Route path="/profiles" component={Profiles} />
         <Route path="/resources" component={Resources} />
-        <Route component={Notfound} />
+        <Route component={NotFound} />
       </Switch>
     </div>
   </Router>
