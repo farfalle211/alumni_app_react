@@ -10,7 +10,7 @@ import { Route,
 
 import * as serviceWorker from './serviceWorker';
 
-import { Routes } from './components/Routes'
+import { Routes } from './Routes'
 
 // const routing = (
 //   <Router>
