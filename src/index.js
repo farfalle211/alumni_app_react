@@ -7,10 +7,14 @@ import { Route,
           BrowserRouter as Router, 
           Switch 
         } from 'react-router-dom'
-
+import axios from 'axios'
 import * as serviceWorker from './serviceWorker';
 
 import { Routes } from './Routes'
+
+axios.defaults.baseURL = 
+  process.env.NODE_ENV === "development" ? "http://localhost:3000" : "/";
+
 
 // const routing = (
 //   <Router>
