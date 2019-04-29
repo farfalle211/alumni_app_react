@@ -1,6 +1,7 @@
 import React from 'react'
 import Resource from '../components/Resource'
 import axios from 'axios'
+import ResourceCard from '../components/ResourceCard'
 
 class Resources extends React.Component {
   constructor() {
@@ -30,6 +31,8 @@ class Resources extends React.Component {
     const resourceComponents = this.resources.map(pen => <Resource key={pen.id} resource={pen} />)
     return (
       <div>
+        <h1>Hello</h1>
+        <ResourceCard />
         <Resource />
       </div>
     )
