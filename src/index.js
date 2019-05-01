@@ -15,7 +15,6 @@ import { Routes } from './Routes'
 axios.defaults.baseURL = 
   process.env.NODE_ENV === "development" ? "http://localhost:3000" : "/";
 
-
 ReactDOM.render(<Router>
                   <Routes />
                 </Router>,
