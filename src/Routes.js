@@ -9,6 +9,7 @@ import Resources from './views/Resources'
 import Profiles from './views/Profiles'
 import NotFound from './views/NotFound'
 import Login from './views/Login'
+import Profile from './views/Profile'
 
 export const Routes = () => {
   return (
@@ -17,7 +18,8 @@ export const Routes = () => {
         <div>
           <Switch>
             <Route exact path="/" component={App} />
-            <Route path="/profiles" component={Profiles} />
+            <Route exact path="/profiles" component={Profiles} />
+            <Route path="/profiles/:userId" component={Profile} />
             <Route path="/resources" component={Resources} />
             <Route component={NotFound} />
           </Switch>

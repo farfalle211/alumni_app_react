@@ -9,13 +9,6 @@ class Resources extends React.Component {
     this.state = {
       resources: []
     }
-    // this.resources = this.resources.bind(this)
-    // axios.get("/api/resources")
-    //   .then(res => {
-    //     const resources = res.data;
-    //     console.log(res.data)
-    //     this.setState({ resources });
-    //   })
   }
 
   componentDidMount() {
@@ -37,7 +30,5 @@ class Resources extends React.Component {
     )
   }
 }
-export default Resources
 
- // <ResourceCard />
- //  <ResourceCard />
+export default Resources
