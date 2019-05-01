@@ -2,6 +2,10 @@ import React from 'react'
 import Resource from '../components/Resource'
 import axios from 'axios'
 import ResourceCard from '../components/ResourceCard'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 
 class Resources extends React.Component {
   constructor() {
@@ -27,12 +31,15 @@ class Resources extends React.Component {
   }
 
   render() {
-    const resourceComponents = this.state.resources.map(pen => <Resource key={pen.id} resource={pen} />)
+    const resourceComponents = this.state.resources.map(resource => <Resource key={resource.id} resource={resource} />)
 
     return (
       <div>
-        <h1>hello</h1>
-        {resourceComponents}
+        <Container>
+          <Row>
+            {resourceComponents} 
+          </Row>
+        </Container>
       </div>
     )
   }
