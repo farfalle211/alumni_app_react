@@ -26,6 +26,8 @@
 // export default App;
 
 import React from 'react'
+import Resources from './views/Resources'
+
 class App extends React.Component {
   render() {
     return (
