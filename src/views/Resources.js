@@ -19,7 +19,9 @@ class Resources extends React.Component {
     axios.get("/api/resources")
       .then(res => {
         const resources = res.data;
-        this.setState({ resources });
+        this.setState({ 
+          resources: resources 
+        });
       }) 
   }
 
