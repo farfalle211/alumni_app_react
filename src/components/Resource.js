@@ -3,7 +3,7 @@ import React from 'react'
 function Resource(props) {
   return (
     <div>
-      <h1>HEY</h1>
+      <h1>{props.resource.title}</h1>
     </div>
 
   )
