@@ -4,9 +4,6 @@ import Card from 'react-bootstrap/Card';
 import CardImg from 'react-bootstrap/CardImg';
 import Vuejs from '../Vuejs.png'
 
-// import { Card, CardImg, CardText, CardBody,
-//   CardTitle, CardSubtitle, Button } from 'reactstrap';
-
 class ResourceCard extends React.Component {
   render() {
     return (
