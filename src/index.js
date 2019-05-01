@@ -15,36 +15,6 @@ import { Routes } from './Routes'
 axios.defaults.baseURL = 
   process.env.NODE_ENV === "development" ? "http://localhost:3000" : "/";
 
-
-// const routing = (
-//   <Router>
-//     <div>
-//       <ul>
-//         <li>
-//           <NavLink exact activeClassName="active" to="/">Home</NavLink>
-//         </li>
-//         <li>
-//           <NavLink activeClassName="active" to="/login">Login</NavLink>
-//         </li>
-//         <li>
-//           <NavLink activeClassName="active" to="/profiles">Profiles</NavLink>
-//         </li>
-//         <li>
-//           <NavLink activeClassName="active" to="/resources">Resources</NavLink>
-//         </li>
-//       </ul>
-//       <hr />
-//       <Switch>
-//         <Route exact path="/" component={App} />
-//         <Route path="/login" component={Login} />
-//         <Route path="/profiles" component={Profiles} />
-//         <Route path="/resources" component={Resources} />
-//         <Route component={NotFound} />
-//       </Switch>
-//     </div>
-//   </Router>
-// )
-
 ReactDOM.render(<Router>
                   <Routes />
                 </Router>,
