@@ -9,11 +9,9 @@ class UserForm extends React.Component {
       user: [],
       first_name: "",
       last_name: "",
-      personal_website_url: "",
       email: "",
       admin: "",
       status: "",
-      location_id: "",
       title: "",
       bio: "",
       linkedin_url: "",
@@ -45,6 +43,34 @@ class UserForm extends React.Component {
       <div>
         <h1>{console.log(this.user)}</h1>
         <form>
+
+  handleSubmit = event => {
+    axios.post("/api/users", {
+                              first_name: this.state.first_name, 
+                              last_name: this.state.last_name,
+                              email: this.state.email,
+                              password: this.state.password,
+                              admin: this.state.admin,
+                              status: this.state.status,
+                              title: this.state.title,
+                              bio: this.state.bio,
+                              linkedin_url: this.state.linkedin_url,
+                              github_url: this.state.github_url,
+                              personal_website_url: this.state.personal_website_url,
+                              picture_url: this.state.picture_url,
+                              image: this.state.image
+                              } )
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
+    })
+
+  }
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
           <input 
             type="text"
             name="first_name"
@@ -63,17 +89,17 @@ class UserForm extends React.Component {
           <br />
           <input 
             type="text"
-            name="personal_website_url"
-            value={this.state.personal_website_url}
-            placeholder="Personal Website"
+            name="email"
+            value={this.state.email}
+            placeholder="Email"
             onChange={this.handleChange}
           />
           <br />
           <input 
             type="text"
-            name="email"
-            value={this.state.email}
-            placeholder="Email"
+            name="password"
+            value={this.state.password}
+            placeholder="Password"
             onChange={this.handleChange}
           />
           <br />
@@ -90,13 +116,6 @@ class UserForm extends React.Component {
             name="status"
             value={this.state.status}
             placeholder="Status"
-            onChange={this.handleChange}
-          />
-          <br />
-          <input 
-            value={this.state.location_id}
-            name="location_id"
-            placeholder="Location ID"
             onChange={this.handleChange}
           />
           <br />
@@ -144,6 +163,14 @@ class UserForm extends React.Component {
             name="picture_url"
             value={this.state.picture_url}
             placeholder="Picture"
+            onChange={this.handleChange}
+          />
+          <br />
+          <input 
+            type="file"
+            name="image"
+            value={this.state.image}
+            placeholder="Image"
             onChange={this.handleChange}
           />
           <br />
