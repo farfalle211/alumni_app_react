@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 class UserForm extends React.Component {
   constructor() {
@@ -6,11 +7,9 @@ class UserForm extends React.Component {
     this.state = {
       first_name: "",
       last_name: "",
-      personal_website_url: "",
       email: "",
       admin: "",
       status: "",
-      location_id: "",
       title: "",
       bio: "",
       linkedin_url: "",
@@ -27,10 +26,31 @@ class UserForm extends React.Component {
     })
   }
 
+  handleSubmit = event => {
+    axios.post("/api/users", {
+                              first_name: this.state.first_name, 
+                              last_name: this.state.last_name,
+                              email: this.state.email,
+                              admin: this.state.admin,
+                              status: this.state.status,
+                              title: this.state.title,
+                              bio: this.state.bio,
+                              linkedin_url: this.state.linkedin_url,
+                              github_url: this.state.github_url,
+                              personal_website_url: this.state.personal_website_url,
+                              picture_url: this.state.picture_url
+                              } )
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
+    })
+
+  }
+
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input 
             type="text"
             name="first_name"
@@ -44,14 +64,6 @@ class UserForm extends React.Component {
             name="last_name"
             value={this.state.last_name}
             placeholder="Last Name"
-            onChange={this.handleChange}
-          />
-          <br />
-          <input 
-            type="text"
-            name="personal_website_url"
-            value={this.state.personal_website_url}
-            placeholder="Personal Website"
             onChange={this.handleChange}
           />
           <br />
@@ -76,13 +88,6 @@ class UserForm extends React.Component {
             name="status"
             value={this.state.status}
             placeholder="Status"
-            onChange={this.handleChange}
-          />
-          <br />
-          <input 
-            value={this.state.location_id}
-            name="location_id"
-            placeholder="Location ID"
             onChange={this.handleChange}
           />
           <br />
@@ -132,6 +137,8 @@ class UserForm extends React.Component {
             placeholder="Picture"
             onChange={this.handleChange}
           />
+          <br />
+          <button>Submit</button>
         </form>
       </div>
     ) 
