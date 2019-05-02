@@ -1,9 +1,10 @@
 import React from 'react'
+import LoginComponent from '../components/LoginComponent'
 
 class Login extends React.Component {
   render() {
     return (
-      <h1>Contact</h1>
+      <LoginComponent />
       )
   }
 }

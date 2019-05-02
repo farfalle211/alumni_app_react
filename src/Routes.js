@@ -24,6 +24,7 @@ export const Routes = () => {
             <Route path="/profiles/new" component={NewProfile} />
             <Route path="/profiles/:userId" component={Profile} />
             <Route path="/resources" component={Resources} />
+            <Route path="/login" component={Login} />
             <Route component={NotFound} />
           </Switch>
         </div>
