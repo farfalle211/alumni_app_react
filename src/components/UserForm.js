@@ -31,6 +31,7 @@ class UserForm extends React.Component {
                               first_name: this.state.first_name, 
                               last_name: this.state.last_name,
                               email: this.state.email,
+                              password: this.state.password,
                               admin: this.state.admin,
                               status: this.state.status,
                               title: this.state.title,
@@ -38,7 +39,8 @@ class UserForm extends React.Component {
                               linkedin_url: this.state.linkedin_url,
                               github_url: this.state.github_url,
                               personal_website_url: this.state.personal_website_url,
-                              picture_url: this.state.picture_url
+                              picture_url: this.state.picture_url,
+                              image: this.state.image
                               } )
     .then(res => {
       console.log(res);
@@ -72,6 +74,14 @@ class UserForm extends React.Component {
             name="email"
             value={this.state.email}
             placeholder="Email"
+            onChange={this.handleChange}
+          />
+          <br />
+          <input 
+            type="text"
+            name="password"
+            value={this.state.password}
+            placeholder="Password"
             onChange={this.handleChange}
           />
           <br />
@@ -135,6 +145,14 @@ class UserForm extends React.Component {
             name="picture_url"
             value={this.state.picture_url}
             placeholder="Picture"
+            onChange={this.handleChange}
+          />
+          <br />
+          <input 
+            type="file"
+            name="image"
+            value={this.state.image}
+            placeholder="Image"
             onChange={this.handleChange}
           />
           <br />
