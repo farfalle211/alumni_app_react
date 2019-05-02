@@ -1,13 +1,13 @@
 import React from 'react'
 import UserForm from '../components/UserForm'
 
-function NewProfile() {
+function EditProfile() {
   return(
     <div>
-      <h1>New User Page</h1>
+      <h1>EDIT FORM</h1>
       <UserForm />
     </div>
-  )  
+  )
 }
 
-export default NewProfile
+export default EditProfile

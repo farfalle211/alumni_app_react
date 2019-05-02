@@ -1,9 +1,12 @@
 import React from 'react'
+import { Route, Link } from 'react-router-dom'
+import axios from 'axios'
 
 class UserForm extends React.Component {
   constructor() {
     super()
     this.state = {
+      user: [],
       first_name: "",
       last_name: "",
       personal_website_url: "",
@@ -19,6 +22,16 @@ class UserForm extends React.Component {
       picture_url: ""
     }
   }
+  
+  // componentDidMount() {
+  //   const { match: { params } } = this.props;
+
+  //   axios.get(`/api/users/${params.userId}`)
+  //     .then(res => {
+  //       const userInfo = res.data;
+  //       this.setState({ user.push(user) })
+  //     })
+  // }
 
   handleChange = (event) => {
     const {name, value} = event.target
@@ -26,10 +39,11 @@ class UserForm extends React.Component {
       [name]: value
     })
   }
-
+  
   render() {
     return (
       <div>
+        <h1>{console.log(this.user)}</h1>
         <form>
           <input 
             type="text"
@@ -132,6 +146,8 @@ class UserForm extends React.Component {
             placeholder="Picture"
             onChange={this.handleChange}
           />
+          <br />
+          <button>Submit</button>
         </form>
       </div>
     ) 
