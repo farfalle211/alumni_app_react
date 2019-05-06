@@ -111,13 +111,17 @@ class UserForm extends React.Component {
             onChange={this.handleChange}
           />
           <br />
-          <input 
-            type="text"
-            name="status"
-            value={this.state.status}
-            placeholder="Status"
-            onChange={this.handleChange}
-          />
+          <label>Status: </label>
+          <select
+              value={this.state.status}
+              onChange={this.handleChange}
+              name="status"
+          >
+              <option value="current_student">Current Student</option>
+              <option value="alumni">Alumni</option>
+              <option value="staff">Staff</option>
+              <option value="professional">Professional</option>
+          </select>
           <br />
           <input 
             type="text"
