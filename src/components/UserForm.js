@@ -35,8 +35,6 @@ class UserForm extends React.Component {
     )
   }
   
-  
-
   componentDidCatch(error, info) {
     console.log({error})
   }
@@ -64,6 +62,7 @@ class UserForm extends React.Component {
                               picture_url: this.state.user.picture_url,
                               image: this.state.user.image
                               } )
+
     .then(response => {
       // console.log(response);
       // console.log(response.data);
@@ -80,7 +79,6 @@ class UserForm extends React.Component {
   render() {
     return (
       <div>
-
         <h1>Error: {this.state.error}</h1>
 
         <form onSubmit={this.handleSubmit}>
