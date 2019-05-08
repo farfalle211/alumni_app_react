@@ -254,6 +254,7 @@
                     </div><!--//section-inner-->
                 </aside><!--//section-->
                 
+                <!-- MARK -->
                 <aside class="education aside section">
                     <div class="section-inner">
                         <h2 class="heading">Education</h2>
