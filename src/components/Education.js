@@ -1,23 +1,19 @@
 import React from "react"
 
-const Education = () => {
-    render() {
-        return(
-            <div class="section-inner">
-                <h2 class="heading">Education</h2>
-                <div class="content">
-                    <div class="item">                      
-                        <h3 class="title"><i class="fas fa-graduation-cap"></i> MSc Computer Science</h3>
-                        <h4 class="university">University College London <span class="year">(2011-2012)</span></h4>
-                    </div> <!--//item-->
-                    <div class="item">
-                        <h3 class="title"><i class="fas fa-graduation-cap"></i> BSc Computer Science</h3>
-                        <h4 class="university">University of Bristol <span class="year">(2008-2011)</span></h4>
-                    </div> 
-                </div> 
-            </div> 
-        )
-    }
+const Education = (props) => {
+  return(
+    <aside class="education aside section">
+      <div class="section-inner">
+        <h2 class="heading">Education</h2>
+        <div class="content">
+          <div class="item">                      
+            <h3 class="title"><i class="fas fa-graduation-cap"></i> { props.degree } </h3>
+            <h4 class="university"> {props.school} <span class="year"> ({props.dates})  </span></h4>
+          </div> 
+        </div> 
+      </div> 
+    </aside>
+  )
 }
 
 export default Education

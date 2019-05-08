@@ -10,8 +10,12 @@ class ComponentsViewer extends React.Component {
       <div>
         <Header />
         <BlogComponent />
+        <Education 
+          school={"The Ohio State University"}
+          degree={"B.S. Computer Science & Engineering"}
+          dates={"2010-2012"}
+        />
         <Footer />
-        <Education />
       </div>
     )
   }
