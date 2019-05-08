@@ -12,7 +12,7 @@ import Login from './views/Login'
 import Profile from './views/Profile'
 import NewProfile from './views/NewProfile'
 import EditProfile from './views/EditProfile'
-
+import ComponentsViewer from './views/ComponentsViewer'
 
 export const Routes = () => {
   return (
@@ -27,6 +27,7 @@ export const Routes = () => {
             <Route path="/profiles/:userId" component={Profile} />
             <Route path="/resources" component={Resources} />
             <Route path="/login" component={Login} />
+            <Route path="/components" component={ComponentsViewer} />
             <Route component={NotFound} />
           </Switch>
         </div>
