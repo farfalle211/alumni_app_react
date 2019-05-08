@@ -12,12 +12,18 @@ import axios from 'axios'
 import * as serviceWorker from './serviceWorker';
 
 import { Routes } from './Routes'
+import Header from './components/Header'
+import Footer from './components/Footer'
+
+
 
 axios.defaults.baseURL = 
   process.env.NODE_ENV === "development" ? "http://localhost:3000" : "/";
 
-ReactDOM.render(<Router>
+ReactDOM.render(<Router> 
+                  <Header />
                   <Routes />
+                  <Footer />
                 </Router>,
                 document.getElementById('root'));
 
