@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Link } from 'react-router-dom'
 import axios from 'axios'
 
 class UserForm extends React.Component {
@@ -22,11 +23,9 @@ class UserForm extends React.Component {
       error: ""
     }
   }
-
+  
   handleChange = (event) => {
     const {name, value} = event.target
-    console.log([name])
-    console.log(value)
     this.setState(
       { 
         user: {
@@ -35,7 +34,18 @@ class UserForm extends React.Component {
       }
     )
   }
+  
+  componentDidCatch(error, info) {
+    console.log({error})
+  }
 
+  componentWillReceiveProps = (newProps) => {
+    this.setState({
+      user: newProps.user
+    }) 
+  }
+
+  
   handleSubmit = event => {
     axios.post("/api/users", {
                               first_name: this.state.user.first_name, 
@@ -52,9 +62,10 @@ class UserForm extends React.Component {
                               picture_url: this.state.user.picture_url,
                               image: this.state.user.image
                               } )
-    .then(res => {
-      console.log(res);
-      console.log(res.data);
+
+    .then(response => {
+      // console.log(response);
+      // console.log(response.data);
     }).catch(error => {
         console.log(error.response.data);
         this.setState({
@@ -69,6 +80,7 @@ class UserForm extends React.Component {
     return (
       <div>
         <h1>Error: {this.state.error}</h1>
+
         <form onSubmit={this.handleSubmit}>
           <input 
             type="text"
@@ -97,16 +109,7 @@ class UserForm extends React.Component {
           <input 
             type="text"
             name="password"
-            value={this.state.user.password}
             placeholder="Password"
-            onChange={this.handleChange}
-          />
-          <br />
-          <input 
-            type="text"
-            name="admin"
-            value={this.state.user.admin}
-            placeholder="Admin"
             onChange={this.handleChange}
           />
           <br />
