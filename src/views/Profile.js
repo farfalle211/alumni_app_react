@@ -1,7 +1,7 @@
 import React from 'react'
+import User from '../components/User'
 import { Route, Link } from 'react-router-dom'
 import axios from 'axios'
-import User from '../components/User'
 
 class Profile extends React.Component {
   constructor() {
@@ -25,7 +25,10 @@ class Profile extends React.Component {
     return (
         <div>
           <h1>Something</h1>
-          <User key={this.state.user.id} userInfo={this.state.user}/>
+          <User 
+            key={this.state.user.id} 
+            userInfo={this.state.user}
+          />
         </div>
     )
   }
