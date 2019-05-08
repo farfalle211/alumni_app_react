@@ -2,26 +2,55 @@ import React from 'react'
 import axios from 'axios'
 
 class LoginComponent extends React.Component {
-  constructor() {
-    super()
-    this.state = {
+  constructor(props) {
+    super(props);
 
-    }
+    this.state = {
+      email: "",
+      password: ""
+    };
+
+    this.change = this.change.bind(this);
+    this.submit = this.submit.bind(this);
   }
 
-handleSubmit = (event) => {
-  axios.post(/api/)
+
+change(e) {
+  this.setState({
+    [e.target.name]: e.target.value
+  });
+}
+
+
+submit(e) {
+  e.preventDefault();
+  axios.post('/api/sessions', {
+                                email: this.state.email,
+                                password: this.state.password
+                              }).then(res => {
+                              localStorage.setItem('cool-jwt', res.data.jwt);
+                              localStorage.setItem('user_id', res.data.user_id);
+                              });
+                            
 }
 
 render() {
     return (
 
-      <form onSubmit={ this.handleSubmit }>
-        <input placeholder="Email" type="email" />
+      <form onSubmit={e => this.submit(e)}>
+        <input placeholder="Email" 
+               type="text" 
+               name="email" 
+               onChange={e => this.change(e)} 
+               value={this.state.email}/>
         <br />
-        <input placeholder="password" type="password" />
+        <input placeholder="password" 
+               type="password" 
+               name="password" 
+               onChange={e => this.change(e)} 
+               value={this.state.password}/>
         <br />
-        <button> Submit </button>
+        <button type="submit"> Submit </button>
       </form>
 
       )
