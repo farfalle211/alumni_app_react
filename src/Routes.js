@@ -14,7 +14,6 @@ import NewProfile from './views/NewProfile'
 import EditProfile from './views/EditProfile'
 
 
-
 export const Routes = () => {
   return (
     <div>
