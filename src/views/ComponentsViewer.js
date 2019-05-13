@@ -3,9 +3,21 @@ import BlogComponent from '../components/BlogComponent'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Education from '../components/Education'
+import Skills from '../components/Skills'
 
 class ComponentsViewer extends React.Component {
   render() {
+    const userSkills = [
+      {
+        name: "Python"
+      },
+      {
+        name: "Rails"
+      },
+      {
+        name: "Javascript"
+      }
+    ]
     return (
       <div>
         <Header />
@@ -15,6 +27,7 @@ class ComponentsViewer extends React.Component {
           degree={"B.S. Computer Science & Engineering"}
           dates={"2010-2012"}
         />
+        <Skills skills={userSkills} />
         <Footer />
       </div>
     )
