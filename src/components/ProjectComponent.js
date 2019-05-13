@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BlogComponent() {
+function ProjectComponent() {
   return (
     <div class="blog aside section">
       <div class="section-inner">
@@ -13,4 +13,4 @@ function BlogComponent() {
     )
 }
 
-export default BlogComponent
+export default ProjectComponent

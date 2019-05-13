@@ -1,19 +1,32 @@
 import React from "react"
 
-const Education = (props) => {
-  return(
-    <aside class="education aside section">
-      <div class="section-inner">
-        <h2 class="heading">Education</h2>
-        <div class="content">
-          <div class="item">                      
-            <h3 class="title"><i class="fas fa-graduation-cap"></i> { props.degree } </h3>
-            <h4 class="university"> {props.school} <span class="year"> ({props.dates})  </span></h4>
+class Education extends React.Component {
+  render() {
+    if(this.props.educationInfo) {
+      const educations = this.props.educationInfo.map(education => {
+        return(
+          <div className="item"> 
+            <h3 className="title"><i className="fas fa-graduation-cap" /> {education.school} </h3>
+            <h4 className="university"> something <span className="year"> nothing 2</span></h4>
           </div> 
-        </div> 
-      </div> 
-    </aside>
-  )
+        )} 
+      )
+      return(
+        <aside className="education aside section">
+          <div className="section-inner">
+          <h2 className="heading">Education</h2>
+            <div className="content">
+              {educations}
+            </div> 
+          </div> 
+       </aside>
+      )
+    } 
+    return(
+      <h1> AIN'T NO PROPS HERE </h1>
+    )
+  }
 }
+
 
 export default Education
