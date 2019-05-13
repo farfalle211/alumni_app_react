@@ -29,6 +29,7 @@ class Profile extends React.Component {
             key={this.state.user.id} 
             userInfo={this.state.user}
           />
+
         </div>
     )
   }
