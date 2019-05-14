@@ -9,13 +9,16 @@ class ComponentsViewer extends React.Component {
   render() {
     const userSkills = [
       {
-        name: "Python"
+        name: "Python",
+        id: 1
       },
       {
-        name: "Rails"
+        name: "Rails",
+        id: 2
       },
       {
-        name: "Javascript"
+        name: "Javascript",
+        id: 3
       }
     ]
     return (
