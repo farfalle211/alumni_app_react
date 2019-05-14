@@ -25,16 +25,24 @@ class Profile extends React.Component {
 
   render() {
     return (
-        <div>
-          <Education 
-            educationInfo={this.state.user.educations}
-          />
-          <User 
-            key={this.state.user.id} 
-            userInfo={this.state.user}
-          />
-          <Skills skills={this.state.user.skills} />
-        </div>
+      <div className="container sections-wrapper">
+          <div className="row">
+              <div className="secondary col-lg-4 col-12">
+                <Education 
+                  educationInfo={this.state.user.educations}
+                />
+                <Skills skills={this.state.user.skills} />
+              </div>
+              
+              <div className="primary col-lg-8 col-12">
+                  <User 
+                    key={this.state.user.id} 
+                    userInfo={this.state.user}
+                  />
+              </div>
+
+          </div>
+      </div>
     )
   }
 }
