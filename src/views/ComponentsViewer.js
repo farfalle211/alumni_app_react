@@ -4,7 +4,6 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Education from '../components/Education'
 import Skills from '../components/Skills'
-import Projects from '../components/Projects'
 
 class ComponentsViewer extends React.Component {
   render() {
@@ -29,7 +28,7 @@ class ComponentsViewer extends React.Component {
           degree={"B.S. Computer Science & Engineering"}
           dates={"2010-2012"}
         />
-        <Projects UserProjects={projects} />
+        {/* <Projects UserProjects={projects} /> */}
       </div>
     )
   }

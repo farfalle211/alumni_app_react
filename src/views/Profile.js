@@ -2,6 +2,7 @@ import React from 'react'
 import User from '../components/User'
 import { Route, Link } from 'react-router-dom'
 import axios from 'axios'
+import Skills from '../components/Skills'
 import Education from '../components/Education'
 
 class Profile extends React.Component {
@@ -25,15 +26,14 @@ class Profile extends React.Component {
   render() {
     return (
         <div>
-          <h1>Something</h1>
           <Education 
-            educationInfo={this.state.user.education}
+            educationInfo={this.state.user.educations}
           />
           <User 
             key={this.state.user.id} 
             userInfo={this.state.user}
           />
-
+          <Skills skills={this.state.user.skills} />
         </div>
     )
   }
