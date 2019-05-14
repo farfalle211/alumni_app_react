@@ -41,7 +41,6 @@ class EditProfile extends React.Component {
         <UserForm 
           user={this.state.user}
         />
-        {console.log(this.state.user)}
       </div>
     )
   }

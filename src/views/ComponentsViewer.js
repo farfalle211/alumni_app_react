@@ -7,31 +7,28 @@ import Skills from '../components/Skills'
 
 class ComponentsViewer extends React.Component {
   render() {
-    const userSkills = [
+    const projects = [
       {
-        name: "Python",
-        id: 1
+        title: "Tacoholic",
+        description: "App that helps you locate tacos",
+        technology: "Rails, Vue.js, Bootstrap 4 and Google APIs"
       },
       {
-        name: "Rails",
-        id: 2
-      },
-      {
-        name: "Javascript",
-        id: 3
+        title: "Sleep Coach",
+        description: "It helps you sleep.",
+        technology: "Rails, Vue.js, Bootstrap 4"
       }
+        
     ]
     return (
       <div>
-        <Header />
-        <BlogComponent />
+        
         <Education 
           school={"The Ohio State University"}
           degree={"B.S. Computer Science & Engineering"}
           dates={"2010-2012"}
         />
-        <Skills skills={userSkills} />
-        <Footer />
+        {/* <Projects UserProjects={projects} /> */}
       </div>
     )
   }
