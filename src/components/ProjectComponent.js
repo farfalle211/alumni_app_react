@@ -1,16 +1,20 @@
 import React from 'react'
 
-function ProjectComponent() {
+function Projects(props) {
+  const displayProjects = props.UserProjects.map(project =>{ 
+       return( 
+           <div className="section-inner">
+              <h2 className="heading">{project.title}</h2>
+              <p>{project.description}</p>
+              <p>{project.technology}</p>
+           </div>
+         )
+  })
   return (
-    <div class="blog aside section">
-      <div class="section-inner">
-          <h2 class="heading">Latest Blog Posts</h2>
-          <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">jQuery RSS plugin</a> to pull in your blog post feeds.</p>
-          <div id="rss-feeds" class="content">
-          </div>
-      </div>
+    <div className="blog aside section">
+    {displayProjects}
     </div>
     )
 }
 
-export default ProjectComponent
+export default Projects
