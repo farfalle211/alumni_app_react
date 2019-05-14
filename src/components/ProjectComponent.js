@@ -17,5 +17,4 @@ function Projects(props) {
     )
 }
 
-
 export default Projects
