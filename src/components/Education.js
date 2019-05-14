@@ -3,6 +3,7 @@ import React from "react"
 class Education extends React.Component {
   render() {
     if(this.props.educationInfo) {
+      
       const educations = this.props.educationInfo.map(education => {
         return(
           <div className="item"> 
