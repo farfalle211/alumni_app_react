@@ -1,25 +1,22 @@
 import React from 'react'
 
-function ProfileHeader() {
+const ProfileHeader = (props) => {
   return (
     <div>
-      <header class="header">
-        <div class="container clearfix">                    
-          <img class="profile-image img-fluid float-left" src="assets/images/profile.png" alt="James Lee" />
-              <div class="profile-content float-left">
-                  <h1 class="name">James Lee</h1>
-                  <h2 class="desc">Web App Developer</h2>   
-                  <ul class="social list-inline">
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>                   
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt"></i></a></li>    
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow"></i></a></li>   
-                      <li class="list-inline-item last-item"><a href="#"><i class="fab fa-codepen"></i></a></li>                
-                  </ul> 
-              </div>
-              <a class="btn btn-cta-primary float-right" href="https://themes.3rdwavemedia.com/" target="_blank"><i class="fas fa-paper-plane"></i> Contact Me</a>              
+      <header className="header">
+        <div className="container clearfix">                    
+          <img className="profile-image img-fluid float-left" src={props.user.picture_url} alt="James Lee" />
+          <div className="profile-content float-left">
+            <h1 className="name"> { props.user.first_name } { props.user.last_name } </h1>
+            <h2 className="desc"> { props.user.title } </h2>   
+            <ul className="social list-inline">
+              <li className="list-inline-item"><a href={props.user.linkedin_url}><i className="fab fa-linkedin-in" /></a></li>
+              <li className="list-inline-item"><a href={props.user.github_url}><i className="fab fa-github-alt" /></a></li>    
+              <li className="list-inline-item"><a href={props.user.personal_website_url}><i className="fas fa-user" /></a></li>          
+            </ul> 
           </div>
+          <a className="btn btn-cta-primary float-right" href={"mailto:" + props.user.email} target="_blank"><i className="fas fa-paper-plane" /> Contact Me</a>              
+        </div>
       </header>
     </div>
   )
