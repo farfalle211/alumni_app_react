@@ -5,6 +5,8 @@ import axios from 'axios'
 import Skills from '../components/Skills'
 import Education from '../components/Education'
 import ProfileHeader from '../components/ProfileHeader'
+import Bio from '../components/Bio'
+
 
 class Profile extends React.Component {
   constructor() {
@@ -39,10 +41,17 @@ class Profile extends React.Component {
           </div>
 
           <div className="primary col-lg-8 col-12">
+
+            <Bio
+              key={this.state.user.id}
+              userBio={this.state.user.bio}
+            />
+
             <User 
               key={this.state.user.id} 
               userInfo={this.state.user}
             />
+
           </div>
 
         </div>
