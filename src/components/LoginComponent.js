@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { withRouter } from 'react-router-dom'
 
 class LoginComponent extends React.Component {
   constructor(props) {
@@ -30,6 +31,7 @@ submit(e) {
                               }).then(res => {
                               localStorage.setItem('cool-jwt', res.data.jwt);
                               localStorage.setItem('user_id', res.data.user_id);
+                              this.props.history.push('/Profiles');
                               });
                             
 }
@@ -58,4 +60,4 @@ render() {
 }
 
 
-export default LoginComponent
+export default withRouter(LoginComponent)

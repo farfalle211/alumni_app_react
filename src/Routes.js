@@ -13,6 +13,7 @@ import Profile from './views/Profile'
 import NewProfile from './views/NewProfile'
 import EditProfile from './views/EditProfile'
 import ComponentsViewer from './views/ComponentsViewer'
+import AuthenticatedComponent from './components/AuthenticatedComponent'
 
 export const Routes = () => {
   return (
@@ -20,15 +21,17 @@ export const Routes = () => {
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={App} />
-            <Route exact path="/profiles" component={Profiles} />
-            <Route path="/profiles/new" component={NewProfile} />
-            <Route path="/profiles/:userId/edit" component={EditProfile} />
-            <Route path="/profiles/:userId" component={Profile} />
-            <Route path="/resources" component={Resources} />
-            <Route path="/login" component={Login} />
-            <Route path="/components" component={ComponentsViewer} />
-            <Route component={NotFound} />
+            <AuthenticatedComponent>
+              <Route exact path="/" component={App} />
+              <Route exact path="/profiles" component={Profiles} />
+              <Route path="/profiles/new" component={NewProfile} />
+              <Route path="/profiles/:userId/edit" component={EditProfile} />
+              <Route path="/profiles/:userId" component={Profile} />
+              <Route path="/resources" component={Resources} />
+              <Route path="/login" component={Login} />
+              <Route path="/components" component={ComponentsViewer} />
+            </AuthenticatedComponent>
+              <Route component={NotFound} />
           </Switch>
         </div>
       </Router>
