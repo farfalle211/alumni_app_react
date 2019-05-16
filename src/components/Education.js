@@ -24,7 +24,7 @@ class Education extends React.Component {
       )
     } 
     return(
-      <h1> AIN'T NO PROPS HERE </h1>
+      <h4> Loading... </h4>
     )
   }
 }

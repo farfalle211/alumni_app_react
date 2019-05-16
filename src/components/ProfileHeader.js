@@ -10,9 +10,9 @@ const ProfileHeader = (props) => {
             <h1 className="name"> { props.user.first_name } { props.user.last_name } </h1>
             <h2 className="desc"> { props.user.title } </h2>   
             <ul className="social list-inline">
-              <li className="list-inline-item"><a href={props.user.linkedin_url}><i className="fab fa-linkedin-in" /></a></li>
-              <li className="list-inline-item"><a href={props.user.github_url}><i className="fab fa-github-alt" /></a></li>    
-              <li className="list-inline-item"><a href={props.user.personal_website_url}><i className="fas fa-user" /></a></li>          
+              <li className="list-inline-item"><a href={props.user.linkedin_url} target="_blank"><i className="fab fa-linkedin-in" /></a></li>
+              <li className="list-inline-item"><a href={props.user.github_url} target="_blank"><i className="fab fa-github-alt" /></a></li>    
+              <li className="list-inline-item"><a href={props.user.personal_website_url} target="_blank"><i className="fas fa-user" /></a></li>          
             </ul> 
           </div>
           <a className="btn btn-cta-primary float-right" href={"mailto:" + props.user.email} target="_blank"><i className="fas fa-paper-plane" /> Contact Me</a>              
