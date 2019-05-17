@@ -5,7 +5,7 @@ function Header() {
     <div>
       <header class="header">
           <div class="container clearfix">                       
-              <img class="profile-image img-fluid float-right" src="assets/images/ActualizeNew.png" alt="James Lee" />
+              <img class="profile-image img-fluid float-right" src="../assets/images/ActualizeNew.png" alt="Logo" />
               <div class="profile-content float-left">
                   <h1 class="name">Actualize Coding Bootcamp</h1>
                   <h2 class="desc">Alumni Network</h2>   
