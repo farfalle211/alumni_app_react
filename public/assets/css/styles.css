@@ -10,7 +10,8 @@ body {
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
   /*background: #9fa8a3;*/
-  background: #c5d5cb;
+  /*background: #c5d5cb;*/
+  background-image: linear-gradient(to right top, #e4e7e5, #d7dbd8, #c9cecb, #bcc2be, #afb6b2);
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -125,8 +126,7 @@ a.dotted-link:hover {
 
 .allHeader {
   /*background: #c5d5cb;*/
-  background: #bbc3bf;
-  
+  background: #a1aaa5;
 }
 
 .header .btn {
