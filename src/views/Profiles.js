@@ -1,7 +1,10 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
+import axios from 'axios'
 
 const Profile = ({ match }) => <p>{match.params.id}</p>
+
+
 
 class Profiles extends React.Component {
   render() {

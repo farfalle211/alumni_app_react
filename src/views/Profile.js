@@ -6,6 +6,8 @@ import Skills from '../components/Skills'
 import Education from '../components/Education'
 import ProfileHeader from '../components/ProfileHeader'
 import Bio from '../components/Bio'
+import Projects from '../components/ProjectComponent'
+
 
 
 class Profile extends React.Component {
@@ -47,11 +49,10 @@ class Profile extends React.Component {
               userBio={this.state.user.bio}
             />
 
-            <User 
-              key={this.state.user.id} 
-              userInfo={this.state.user}
+            <Projects
+              key={this.state.user.id}
+              userProjects={this.state.user.projects}
             />
-
           </div>
 
         </div>

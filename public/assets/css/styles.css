@@ -62,7 +62,7 @@ a:focus {
 a.btn-cta-primary, .btn-cta-primary {
   background: #54ba4e;
   background: #88B59F;
-  border: 1px solid #54ba4e;
+  border: 1px solid #848D89;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -226,6 +226,10 @@ a.dotted-link:hover {
 
 /* About Section */
 /* Latest Section */
+.about {
+  margin-top: 30px;
+}
+
 .latest .item {
   margin-bottom: 30px;
 }
