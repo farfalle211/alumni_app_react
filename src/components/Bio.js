@@ -10,7 +10,7 @@ class Bio extends React.Component {
             <div class="section-inner">
               <h2 class="heading">About Me</h2>
               <div class="content">
-                <p>{ this.props.userBio }</p>
+                <h4>{ this.props.userBio }</h4>
               </div>
             </div>
           </section>

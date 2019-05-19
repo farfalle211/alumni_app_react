@@ -8,11 +8,9 @@
 */
 body {
   font-family: 'Lato', arial, sans-serif;
-  color: #434343;
+  /*color: #434343;*/
   /*background: #9fa8a3;*/
-  /*background: #c5d5cb;*/
-  background-image: linear-gradient(to right top, #e4e7e5, #d7dbd8, #c9cecb, #bcc2be, #afb6b2);
-  font-size: 16px;
+  background: #E1E2E1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -63,7 +61,8 @@ a:focus {
 
 a.btn-cta-primary, .btn-cta-primary {
   background: #54ba4e;
-  border: 1px solid #54ba4e;
+  background: #88B59F;
+  border: 1px solid #848D89;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -71,6 +70,7 @@ a.btn-cta-primary, .btn-cta-primary {
 
 a.btn-cta-primary:hover, .btn-cta-primary:hover {
   background: #49ac43;
+  background: #88B59F;
   border: 1px solid #49ac43;
   color: #fff;
 }
@@ -121,12 +121,18 @@ a.dotted-link:hover {
 .header {
   padding: 30px 0;
   background: #d9d5bf;
+  background: #5a8571;
   border-top: 10px solid #778492;
 }
 
 .allHeader {
   /*background: #c5d5cb;*/
-  background: #a1aaa5;
+  background: #E1E2E1;
+  background: #848D89;
+  border-top: 10px solid #778492;
+  padding: 15px 0;
+  width: 100%;
+  position: top;
 }
 
 .header .btn {
@@ -135,8 +141,9 @@ a.dotted-link:hover {
 }
 
 .header .profile-image {
-  margin-right: 30px;
-
+  margin-right: 20px;
+  height: 125px;
+  border-radius: 20px;
 }
 
 .header .profile-picture {
@@ -199,6 +206,7 @@ a.dotted-link:hover {
 
 .section .section-inner {
   background: #e3e0cf;
+  background: #88B59F;
   padding: 30px;
 }
 
@@ -218,6 +226,10 @@ a.dotted-link:hover {
 
 /* About Section */
 /* Latest Section */
+.about {
+  margin-top: 30px;
+}
+
 .latest .item {
   margin-bottom: 30px;
 }
@@ -234,6 +246,7 @@ a.dotted-link:hover {
 
 .latest .item .title a {
   color: #778492;
+  color: #000000;
 }
 
 .latest .item .title a:hover {
@@ -510,6 +523,10 @@ a.dotted-link:hover {
 }
 
 /* Education section */
+.education {
+  margin-top: 30px;
+
+}
 .education .item {
   margin-bottom: 30px;
 }
@@ -634,7 +651,7 @@ a.dotted-link:hover {
 
 /* ======= Footer ======= */
 .footer {
-  background: #32383e;
+  background: #848D89;
   color: #fff;
   padding: 10px 0;
 }

@@ -25,7 +25,7 @@ const Skills = props => {
             
             {userSkills}
 
-            <p><a className="more-link" href="/"><i className="fas fa-external-link-alt" />More on Coderwall</a></p> 
+            {/* <p><a className="more-link" href="/"><i className="fas fa-external-link-alt" />More on Coderwall</a></p> */}
           </div>              
         </div>
       </div>
